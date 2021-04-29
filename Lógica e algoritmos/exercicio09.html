@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+// Velocidade do veiculo e velocidade da pista
+var vp = prompt("Informe a velocidade da pista")
+var vv = prompt("Informe a velocidade do veículo")
+
+/*
+var resto = vv - vp 
+*/
+
+// Condicional
+if(vv < vp || vv == vp){
+  alert("Parabéns,você é um bom motorista!!")
+}else if(vv - vp <= 10){
+  alert("Multa de R$50,00")
+}else if(vv - vp >= 10 && vv - vp <= 20){
+  alert("Multa de R$100,00")
+}else if(vv - vp >= 20){
+  alert("Multa de R$200,00")
+}
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

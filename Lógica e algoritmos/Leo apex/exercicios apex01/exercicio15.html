@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <script>
+
+ // Obter o salário
+ var salario = parseInt(prompt("Informe seu salário"))
+
+// Obter contas
+var luz = parseInt(prompt("Qual é o gasto com a luz?"))
+var telefone = parseInt(prompt("Qual é o gasto com o telefone?"))
+var agua = parseInt(prompt("Qual é o gasto com a água?"))
+var mercado = parseInt(prompt("Qual é o gasto com o mercado?"))
+var lazer = parseInt(prompt("Qual é o gasto com o lazer?"))
+var aluguel = parseInt(prompt("Qual é o gasto com o aluguel?"))
+
+// Cálculo
+var calculo = salario - (luz+telefone+agua+mercado+lazer+aluguel);
+
+// Mensagem
+alert("Ao final do mês você terá disponível: R$"+calculo);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

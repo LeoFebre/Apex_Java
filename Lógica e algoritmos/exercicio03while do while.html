@@ -8,22 +8,22 @@
 
   <script>
 
-// Obter um número
-var n1 = parseInt(prompt("Informe um número"))
-var n2 = parseInt(prompt("Informe outro número"))
+// Obter números
+var numero1 = parseInt(prompt("Informe um número"))
+        var numero2 = parseInt(prompt("Informe outro número"))
 
-// Número mínimo
-var minimo = numero - 6
-
-// Número máximo
-var maximo = numero + 6
-
-// Laço de repetição
-
-while(minimo <= maximo){
-document.write(minimo + "<br>")
-minimo++
-}
+        // Verifica qual é o menor
+        if(numero1 < numero2){
+            while(numero1 <= numero2){
+                document.write(numero1 + " ")
+                numero1++
+            }
+        }else{
+            while(numero1 >= numero2){
+                document.write(numero1 + " ")
+                numero1--
+            }
+        }
 
 </script>
 

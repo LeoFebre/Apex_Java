@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+ // Obter números
+ var numero1 = parseInt(prompt("Informe um número"))
+        var numero2 = parseInt(prompt("Informe outro número"))
+
+        // Contadores
+        var pares = 0, impares = 0, positivos = 0, negativos = 0
+
+        // Verifica qual é o menor
+        if(numero1 < numero2){
+            while(numero1 <= numero2){
+
+                // Pares e ímpares
+                if(numero1 % 2 == 0){
+                    pares++
+                }else{
+                    impares++
+                }
+
+                // Positivos e negativos
+                if(numero1 < 0){
+                    negativos++
+                }else{
+                    positivos++
+                }
+
+                // Exibir valor
+                document.write(numero1 + " ")
+
+                // Incremento
+                numero1++
+            }
+        }else{
+            while(numero1 >= numero2){
+
+                // Pares e ímpares
+                if(numero1 % 2 == 0){
+                    pares++
+                }else{
+                    impares++
+                }
+
+                // Positivos e negativos
+                if(numero1 < 0){
+                    negativos++
+                }else{
+                    positivos++
+                }
+
+                // Exibir valor
+                document.write(numero1 + " ")
+
+                // Decremento
+                numero1--
+            }
+        }
+
+        // Exibir dados
+        document.write("<hr>")
+        document.write("Positivos: "+positivos + "<br>")
+        document.write("Negativos: "+negativos + "<br>")
+        document.write("Pares: "+pares + "<br>")
+        document.write("Ímpares': "+impares)
+        
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

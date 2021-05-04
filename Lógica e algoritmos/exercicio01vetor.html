@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+// Vetor
+var numeros = []
+
+// Obter os cinco números
+for(var indice = 0; indice < 5; indice++){
+  numeros.push((parseInt(prompt("Informe o "+(indice+1)+"º número"))))
+} 
+
+// Soma
+var soma = 0
+
+// Realizar Soma
+for(var indice = 0; indice < 5; indice++){
+  soma += numeros[indice]
+}
+
+//Exibir os valores
+for(var indice = 0; indice < 5; indice++){
+  document.write((indice+1)+"º valor é " + numeros[indice]+ "<br>")
+}
+
+// Exibir a soma
+document.write("A soma dos valores é " + soma)
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

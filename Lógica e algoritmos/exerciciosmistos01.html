@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<script>
+
+// Obter produto,valor e forma de pagamento
+
+var produto = prompt("Informe o produto")
+var valor = parseInt(prompt("Informe um valor"))
+var pagamento = prompt("Forma de pagamento?")
+
+// Condicional
+
+if(valor >= 500 && pagamento == "a vista" ){
+alert("Você recebeu desconto de 10%")
+valor = valor * 0.9
+}else{
+  alert("Você não terá desconto")
+}
+
+// Exibir nome do produto e valor
+document.write("Produto: "+produto+"<br>Valor: "+valor)
+
+
+</script>
+
+
+
+
+</head>
+<body>
+  
+</body>
+</html>

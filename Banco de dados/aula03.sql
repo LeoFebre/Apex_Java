@@ -26,3 +26,5 @@ SELECT * FROM produtos WHERE valor IS NOT NULL;
 
 TRUNCATE TABLE produtos;
 
+drop table produtos;
+

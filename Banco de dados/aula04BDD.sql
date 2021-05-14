@@ -38,7 +38,11 @@ GROUP BY cargos.codigoCargo;
 
 INSERT INTO colaboradores VALUES (null, "Luana", null);
 
+truncate table cargos;
 
+DROP TABLE cargos;
+
+drop table colaboradores;
 
 
 

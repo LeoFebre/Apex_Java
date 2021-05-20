@@ -1,0 +1,27 @@
+package exemplo07;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// Variável
+		String cidade = JOptionPane.showInputDialog("Informe uma cidade");
+		
+		// Switch
+		switch(cidade) {
+		case "Blumenau":
+		System.out.println("Cidade da oktoberfest");
+		break;
+		
+		case "Florianopolis":
+		System.out.println("Capital do estado");
+		break;
+			
+		default:
+		System.out.println("Cidade não encontrada");	
+		}
+
+	}
+
+}

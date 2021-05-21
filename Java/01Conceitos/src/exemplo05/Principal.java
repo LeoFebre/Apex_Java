@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		// Números inteiros: Integer.parseInt()
-		// Números reais: Double.parseDouble()
+		// Números reais/quebrados: Double.parseDouble()
 		
 		try {
 			int n1 = Integer.parseInt(JOptionPane.showInputDialog("Informe um número"));

@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import modelo.UsuarioModelo;
+
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -21,7 +24,7 @@ public class Notas extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Notas() {
+	public Notas(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 569, 321);
 		contentPane = new JPanel();
@@ -50,7 +53,7 @@ public class Notas extends JFrame {
 				dispose();
 				
 				// Exibir o JFRAME Professor
-				Professor p = new Professor();
+				Professor p = new Professor(um);
 				p.setVisible(true);
 				
 				

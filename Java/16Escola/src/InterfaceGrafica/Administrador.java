@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -21,7 +24,7 @@ public class Administrador extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Administrador() {
+	public Administrador(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 550, 344);
 		contentPane = new JPanel();
@@ -29,7 +32,7 @@ public class Administrador extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblBoasVindas = new JLabel("Boa Noite Administrador");
+		JLabel lblBoasVindas = new JLabel("Boa Noite "+um.getNome());
 		lblBoasVindas.setFont(new Font("Lucida Sans Unicode", Font.PLAIN, 13));
 		lblBoasVindas.setBounds(10, 25, 171, 14);
 		contentPane.add(lblBoasVindas);
@@ -39,7 +42,7 @@ public class Administrador extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		JButton btnCadastrar = new JButton("Cadastrar Usu\u00E1rios");
+		JButton btnCadastrar = new JButton("Cadastrar Usuários");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -47,7 +50,7 @@ public class Administrador extends JFrame {
 				dispose();
 				
 				// Exibir o JFRAME Usuarios
-				Usuarios u = new Usuarios();
+				Usuarios u = new Usuarios(um);
 				u.setVisible(true);
 				
 			}

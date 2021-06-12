@@ -6,7 +6,13 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controle.UsuarioControle;
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -30,7 +36,7 @@ public class Usuarios extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Usuarios() {
+	public Usuarios(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 538, 361);
 		contentPane = new JPanel();
@@ -120,8 +126,8 @@ public class Usuarios extends JFrame {
 		JComboBox cbxTipo = new JComboBox<String>();
 		cbxTipo.addItem("Tipo de conta");
 		cbxTipo.addItem("Administrador");
-		cbxTipo.addItem("Aluno");
 		cbxTipo.addItem("Professor");
+		cbxTipo.addItem("Aluno");
 		cbxTipo.setBounds(10, 246, 495, 22);
 		contentPane.add(cbxTipo);
 		
@@ -129,6 +135,31 @@ public class Usuarios extends JFrame {
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				// Tentativa
+				try {
+				
+				// Obter dados
+				
+				String nome = txtNome.getText();
+				String email = txtEmail.getText(); 
+				String senha = String.valueOf(pswSenha.getPassword()); 
+				String bairro = txtBairro.getText();
+				String rua = txtRua.getText(); 
+				int numero = Integer.parseInt(txtNumero.getText());
+				String complemento = txtComplemento.getText();
+				String telefone = txtTelefone.getText(); 
+				int tipo = cbxTipo.getSelectedIndex();
+				
+				// Criar objeto do tipo UsuarioModelo
+				UsuarioModelo um = new UsuarioModelo(nome, senha, email, bairro, rua, numero, complemento, telefone, tipo);
+				
+				// Cadsatrar usuário
+				boolean status = UsuarioControle.cadastrar(um);
+				
+				// Mensagem
+				JOptionPane.showMessageDialog(null, status == true ? "Cadastro realizado com sucesso!" : "Falha ao cadastrar");
+				
+				}catch (Exception erro) {}
 			}
 		});
 		btnCadastrar.setFont(new Font("Lucida Sans Unicode", Font.PLAIN, 13));
@@ -143,7 +174,7 @@ public class Usuarios extends JFrame {
 				dispose();
 				
 				// Exibir o JFRAME Administrador
-				Administrador a = new Administrador();
+				Administrador a = new Administrador(um);
 				a.setVisible(true);
 				
 			}

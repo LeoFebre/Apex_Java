@@ -159,6 +159,20 @@ public class Usuarios extends JFrame {
 				// Mensagem
 				JOptionPane.showMessageDialog(null, status == true ? "Cadastro realizado com sucesso!" : "Falha ao cadastrar");
 				
+				// Limpar campos
+				txtNome.setText("");
+				txtEmail.setText("");
+				pswSenha.setText("");
+				txtBairro.setText("");
+				txtRua.setText("");
+				txtNumero.setText("");
+				txtComplemento.setText("");
+				txtTelefone.setText("");
+				cbxTipo.setSelectedIndex(0);
+				
+				// Cursor no campo nome
+				txtNome.requestFocus();
+				
 				}catch (Exception erro) {}
 			}
 		});

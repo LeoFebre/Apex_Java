@@ -1,0 +1,12 @@
+.card{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card img{
+  width: 50%;
+  height: 150px;
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}

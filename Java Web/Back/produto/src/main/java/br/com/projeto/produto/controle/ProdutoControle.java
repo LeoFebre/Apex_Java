@@ -53,7 +53,7 @@ public class ProdutoControle {
 		return acao.save(pm);
 	}
 	
-	@DeleteMapping(value="/api{codigo}")
+	@DeleteMapping(value="/api/{codigo}")
 	public void remover(@PathVariable int codigo) {
 		
 		ProdutoModelo pm = acao.findByCodigo(codigo);
